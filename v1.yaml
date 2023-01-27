@@ -1,0 +1,16 @@
+minio:
+  enabled: true
+  replicas: 1
+  drivesPerNode: 2
+  rootUser: loki
+  rootPassword: lokiloki
+
+loki:
+  image:
+    repository: grafana/loki:2.7.1
+write:
+  # -- Number of replicas for the write
+  replicas: 1
+read:
+  # -- Number of replicas for the read
+  replicas: 1

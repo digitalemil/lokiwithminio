@@ -1,0 +1,14 @@
+common:
+  path_prefix: /var/loki
+  replication_factor: 1
+  storage:
+    s3:
+      access_key_id: loki
+      bucketnames: chunks
+      endpoint: loki-minio.default.svc:9000
+      insecure: true
+      s3forcepathstyle: true
+      secret_access_key: lokiloki
+
+
+loki-minio            ClusterIP      10.100.65.208    <none>        9000/TCP  
